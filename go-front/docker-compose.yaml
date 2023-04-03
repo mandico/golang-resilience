@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  frontend:
+    image: go-front:1.0.0
+    deploy:
+      replicas: 3
+    environment:
+      - APP_VERSION=2.0.0
+    ports:
+      - "8888"
