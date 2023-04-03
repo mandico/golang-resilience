@@ -39,3 +39,13 @@ CONTAINER ID   IMAGE            COMMAND   CREATED          STATUS          PORTS
 49ae4c0dff91   go-front:1.0.0   "./app"   45 seconds ago   Up 44 seconds   0.0.0.0:50793->8888/tcp   go-front-frontend-3
 e4ae3456ee20   go-front:1.0.0   "./app"   45 seconds ago   Up 44 seconds   0.0.0.0:50794->8888/tcp   go-front-frontend-2
 ```
+
+### Apply Deployment
+``` shell
+kubectl apply -f deployment.yaml
+```
+
+### Test Loop
+``` shell
+while true; do curl -X GET http://localhost:8888/go-demo/info; echo "" && sleep 1; done
+```
