@@ -13,7 +13,7 @@ curl -X GET http://localhost:8888/go-demo/version
 
 ### Build Image Application
 ``` shell
-docker build -t go-front:1.0.0 . --no-cache
+docker build -t go-front:1.0.0 . --no-cache --platform linux/amd64
 ```
 
 ### Docker Compose Up

@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: go-front
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: go-front
@@ -11,7 +12,6 @@ spec:
       labels:
         app: go-front
     spec:
-      replicas: 3
       containers:
       - name: go-front
         image: luizmandico/go-front:1.0.0
